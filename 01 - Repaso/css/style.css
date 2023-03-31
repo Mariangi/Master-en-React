@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    width: 70%;
+    margin: 20px auto;
+    border: 1px solid lightgray;
+    background-color: #F4F3EE;
+    border-radius: 7px;
+    overflow: hidden;
+    min-width: 590px;
+}
+
+header{
+    background-color: #E0AFA0;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: #444;
+}
+
+nav{
+    background-color: #EAD1C7;
+    height: 50px ;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none ;
+    text-align: center;
+    line-height: 50px ;
+}
+
+nav ul li{
+    padding: 0 7.5%;
+    /* - 37.36px - 63.18px - 63.18px - 32.03 - 64.06  */
+    /* -259.81px */
+    /* padding: 0 calc((100% -24.4% )/ 10); */
+    /* padding: 0 calc((74% )/ 10); */
+    /*esto no funciona*/
+}
+
+nav ul li:hover{
+    background-color: #E0AFA0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #444;
+}
+
+#wrap{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+#content{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+#content .article{
+    background-color: #BCB8B1;
+    border-radius: 5px;
+    height: 100px;
+    padding: 10px;
+    margin: 5px;
+}
+
+aside{
+    background-color: #D8D6D0;
+    width: 30%;
+    padding: 17px 10px;
+}
+
+aside form{
+    margin: 12px 7px 7px 7px ;
+}
+
+aside input[type="text"]{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #F4F3EE;
+    border-bottom: 1px solid #BCB8B1;
+    border-radius: 3px;
+    overflow: hidden;
+    height: 25px;
+}
+
+aside input[type="submit"]{
+    height: 25px;
+    width: 70px;
+    background-color: #EAD1C7;
+    border: 1px solid #E0AFA0;
+    color: #444;
+}
+
+footer{
+    background-color: #8A817C;
+    height: 50px;
+    padding: 0 25px;
+    text-align: end;
+    line-height: 50px;
+}
+
+
+@media (max-width: 1500px ){
+    nav ul li{
+        padding: 0 7%;
+    }
+}
+
+@media (max-width: 1280px ){
+    aside form{
+        margin: 7px 5px;
+    }
+}
+
+@media (max-width: 1250px ){
+    nav ul li{
+        padding: 0 6.5%;
+    }
+
+    aside input[type="submit"]{
+        margin-top: 7px;
+        margin-left: 46px;
+    }
+    
+}
+
+@media (max-width: 1080px ){
+    nav ul li{
+        padding: 0 6%;
+    }
+}
+
+@media (max-width: 950px ){
+    nav ul li{
+        padding: 0 5.5%;
+    }
+
+    aside form{
+        margin: 7px 3px;
+    }
+}
