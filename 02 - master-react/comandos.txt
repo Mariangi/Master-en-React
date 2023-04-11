@@ -1,0 +1,2 @@
+	
+npx create-react-app 01-primeros-pasos: create the bases of my app
