@@ -9,12 +9,22 @@ const ComponenteDos = () => {
     return (
         <div>
         <h1>Listado de libros</h1>
-        <ul>
-            <li>{libros[0]}</li>
-            <li>{libros[1]}</li>
-            <li>{libros[2]}</li>
-            
-        </ul>
+
+        {/* esto es un if, el signo de pregunta indica que le sigue el resultado de que la condicion sea true */}
+        {libros.length >= 1 ?
+            // SI hay libros....
+            (<ul>
+                {libros.map((libro, indice) =>{
+                    return <li key={indice}>{libro}</li>
+                })}
+                
+            </ul>)
+            :   //esto es un else
+            // No hay libros....
+            (<p>No hay libros</p>)
+        }
+
+        
     </div>
     );
 }
