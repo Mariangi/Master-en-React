@@ -4,8 +4,6 @@ const ComponenteDos = () => {
     let libros = ["harry potter", "Juego de tronos", "las cronicas de Narnia"];
     // let libros = [];
 
-    console.log(libros);
-
     return (
         <div>
         <h1>Listado de libros</h1>
