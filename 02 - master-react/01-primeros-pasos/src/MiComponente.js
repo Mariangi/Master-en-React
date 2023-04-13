@@ -10,7 +10,7 @@ const MiComponente = () =>{
     console.log(usuario);
 
     return ( <>
-            <h2>Componente crado</h2>
+            <h2>Componente creado</h2>
             <h2>Datos del usuario</h2>
             <ul>
                 <li>nombre: {usuario.nombre}</li>

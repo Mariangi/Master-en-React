@@ -3,6 +3,7 @@ import './App.css';
 import MiComponente from './MiComponente.js';
 import ComponenteDos from './ComponenteDos';
 import { ComponenteTres } from './ComponenteTres';
+import { EventosComponente } from './EventosComponente';
 
 function App() {
 
@@ -20,8 +21,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        {/* mi componente */}
         <div className='componentes'>
+          <EventosComponente/>
+          <hr/>
+           {/* mi componente */}
           <MiComponente/>
           <hr/>
           <ComponenteDos/>
