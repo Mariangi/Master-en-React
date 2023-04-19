@@ -1,0 +1,1 @@
+- (npx create-react-app 03-repaso-react): creas un nuevo proyecto
