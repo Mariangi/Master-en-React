@@ -40,7 +40,6 @@ export const PruebasComponent = () => {
             <button onClick={cambiarFecha} className='btn'>Cambiar fecha</button>
         </p>
 
-        <hr/>
 
         {usuario == "MARIA" && <AvisoComponent/>}
 

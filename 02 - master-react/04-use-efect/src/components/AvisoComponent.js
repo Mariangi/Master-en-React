@@ -13,6 +13,7 @@ export const AvisoComponent = () => {
 
   return (
     <div>
+                <hr/>      
         <h2>Saludos MARIA</h2>
         <button className='btn' onClick={e=>{
             alert("Saludos");
