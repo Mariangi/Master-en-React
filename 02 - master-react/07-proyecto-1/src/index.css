@@ -1,0 +1,226 @@
+body{
+  background-color: #d1defa;
+  font-family: sans-serif,Arial, Helvetica;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.layout{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 70px auto 50px ;
+  grid-template-areas: 
+  "header header header header"
+  "nav nav nav nav"
+  "content content content sidebar"
+  "footer footer footer footer";
+}
+
+/* ----------  Header  ---------- */
+
+.header{
+  grid-area: header;
+  background-color: white;
+  text-align: left;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header h1{
+  margin-left: 15px;
+}
+
+.logo{
+  background: linear-gradient(90deg, #032287 10%, #0e73e4 100%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  align-items: center;
+}
+
+.play{
+  width: 0;
+  height: 0;
+  border-left: 14px solid wheat;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  margin: 5px;
+}
+
+/* ----------  Nav  ---------- */
+
+.nav{
+  grid-area: nav;
+  /* background-color: lightcyan; */
+  background: linear-gradient(90deg, #032287 10%, #0e73e4 100%);
+  /* background: linear-gradient(90deg, #00000080 1%, #fff 40%); */
+}
+
+.nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 70px;
+  margin: 0;
+}
+
+.nav ul li{
+  list-style: none;
+  color: whitesmoke;
+  font-weight: lighter;
+  font-size: 18px;
+  transition: all 300ms;
+}
+
+.nav ul li:hover{
+  transform: scale(1.2, 1.2);
+}
+
+.nav li a{
+  text-decoration: none;
+}
+
+/* ----------  Content  ---------- */
+
+.content{
+  grid-area: content;
+  /* background-color: rgb(120, 216, 120); */
+  background-color: #f6f7f9;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.peli-item{
+  /* background-color: lightgreen; */
+  /* width: 40%; */
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #ddd;
+  margin: 20px;
+  padding: 50px 20px ;
+}
+
+button, input[type="submit"], input[type="button"]{
+  width: 100px;
+  /* background: linear-gradient(160deg, #03238f 0%, #0b70e1 77%); */
+  background-color: #0b70e1;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  padding: 15px;
+  margin-top: 15px;
+  text-transform: capitalize; /*esto hace que la primer aletra del texto sea mayuscula*/
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.peli-item .delete{
+  margin-left: 5px;
+}
+
+.peli-item .edit:hover{
+  background-color: #e77b00;
+}
+
+.peli-item .delete:hover{
+  background-color: #9b0202;
+}
+
+/* ----------  Sidebar  ---------- */
+
+.sidebar{
+  grid-area: sidebar;
+  background-color: #f6f7f9;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+}
+
+.sidebar >  div{
+  box-sizing: border-box;
+  width: 90%;
+  margin: 20px;
+  padding: 20px;
+  padding-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #ddd;
+}
+
+ input[type="text"], textarea{
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f6f7f9;
+  border: none;
+  border-bottom: 0.5px solid #ccc;
+  outline: none;
+  color: #454545;
+  width: 70%;
+}
+
+.no-encontrado{
+  color: #9b0202;
+}
+
+/* ----------  Footer  ---------- */
+
+.footer{
+  grid-area: footer;
+  background-color: #d1defa;
+  color: #454545;
+  text-align: left;
+  line-height: 50px;
+  padding-left: 70px;
+}
+
+
+/* ----------  Media Query  ---------- */
+
+@media (max-width: 1208px) {
+  /* de esa media hacia 0px */
+  /* .peli-item{
+      width: 40%;
+      margin: 10px;
+  } */
+
+  .layout{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+      grid-template-areas: 
+      "header header header header header header header"
+      "nav nav nav nav nav nav nav"
+      "content content content content content sidebar sidebar"
+      "footer footer footer footer footer footer footer";
+  }
+
+}
+
+@media (max-width: 915px) {
+  /* .peli-item{
+      width: 80%;
+  } */
+
+  .layout{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+      grid-template-areas: 
+      "header header header header header "
+      "nav nav nav nav nav "
+      "content content content sidebar sidebar"
+      "footer footer footer footer footer";
+  }
+}
