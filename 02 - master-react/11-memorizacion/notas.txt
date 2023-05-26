@@ -1,0 +1,1 @@
+React.memo = sirve para guardar el resultado de un componente para que no se renderice todo el tiempo
