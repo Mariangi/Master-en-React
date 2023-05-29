@@ -1,0 +1,47 @@
+
+.App-logo {
+  height: 40vmin;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+#caja{
+  width: 100px;
+  height: 100px;
+  background-color: #61dafb;
+  border-radius: 5px;
+  color:  #444;
+  text-align: center;
+  line-height: 100px;
+  /* margin: 10px auto; */
+}
+
+.btn{
+
+  border: 2px solid #4b8895;
+  color: whitesmoke;
+  background-color: #53a4aa;
+
+  border-radius: 5px;
+  padding: 5px;
+  /* color: #444; */
+  padding: 11px;
+
+}
+
+
+.btn:hover{
+  background-color: #4b8895;
+}
+
