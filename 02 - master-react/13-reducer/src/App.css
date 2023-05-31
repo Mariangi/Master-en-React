@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+form{
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 10px auto;
+}
+
+input[type="text"], form textarea{
+  width: 80%;
+  background-color: #282c34;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #61dafb;
+  /* box-shadow: 1px 1px 1px 4px #ffffff24 inset; */
+  box-shadow: 1px 1px 7px -4px rgba(255,255,255,1) inset;
+  margin: 7px;
+  padding: 10px;
+}
+
+
+.btn{
+  display: inline;
+  border: 2px solid #4b8895;
+  color: whitesmoke;
+  background-color: #53a4aa;
+
+  border-radius: 5px;
+  padding: 5px;
+  /* color: #444; */
+  padding: 11px;
+  margin: 10px 0;
+}
+
+
+.btn:hover{
+  background-color: #4b8895;
+}
+
+/* ------------------------------------------------------- */
+
+section{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.fila{
+  display: flex;
+  height: 40px;
+  background-color: whitesmoke;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 7px;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+
+  line-height: 40px;
+}
+
+.fila h4{
+  color: #282c34;
+  margin: 0;
+  text-transform: capitalize;
+  margin-left: 5px ;
+}
+
+.fila .btn{
+  margin: 3px;
+  /* padding: 7px; */
+
+}
+
+.btns .btn-eliminar{
+  background-color: #DC3545;
+  border: none;
+  color: whitesmoke;
+}
+
+.btns .btn-eliminar:hover{
+  background-color: #D02A3A;
+}
+
+.btns .btn-guardar{
+  background-color: #198754;
+  border: none;
+  color: whitesmoke;
+}
+
+.btns input[type="text"]{
+  width: 40%;
+}
