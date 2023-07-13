@@ -82,32 +82,32 @@ const crear = async(req, res) =>{
 
 
 const listar = async(req,res) =>{
-    try{
-      
 
-        // sort oredena los resultados si el criterio fecha esta en -1, eso quiere decir que los ordenara de manera desendente segun su fecha
-        let consulta = await Articulo.find();
-
-        if(req.params.ultimos){
-            consulta = await Articulo.find().limit(req.params.ultimos).exec();
-            //consulta.limit(req.params.ultimos).exec();
+    setTimeout(async() => {
+        try{
+            // sort oredena los resultados si el criterio fecha esta en -1, eso quiere decir que los ordenara de manera desendente segun su fecha
+            let consulta = await Articulo.find();
+    
+            if(req.params.ultimos){
+                consulta = await Articulo.find().limit(req.params.ultimos).exec();
+                //consulta.limit(req.params.ultimos).exec();
+            }
+    
+            return res.status(200).json({
+                status: "success",
+                parametro: req.params.ultimos,
+                contador: consulta.length,
+                articulos: consulta
+            });
+    
+        }catch(error){
+            console.log(error);
+            return res.status(400).json({
+                status: "error",
+                mensaje: "No se ha encontrado articulos"
+            });
         }
-
-        return res.status(200).json({
-            status: "success",
-            parametro: req.params.ultimos,
-            contador: consulta.length,
-            articulos: consulta
-        });
-
-    }catch(error){
-        console.log(error);
-        return res.status(400).json({
-            status: "error",
-            mensaje: "No se ha encontrado articulos"
-        });
-    }
-
+    }, 3000)
 
     //esto es como un get de todo lo que hay en la base. el exec guarda la respuesta del find o un error
 
